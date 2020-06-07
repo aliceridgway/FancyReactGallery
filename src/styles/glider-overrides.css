@@ -1,0 +1,31 @@
+.glider-dot{
+    height:8px;
+    width:8px;
+}
+
+.glider-next.disabled,
+.glider-prev.disabled {
+    opacity:0.4;
+}
+
+.glider-prev{
+    left:-32px;
+    top:135px;
+}
+
+.glider-next{
+    right:-32px;
+    top:135px;
+}
+
+@media (min-width:1200px){
+    .glider-prev{
+        left:-32px;
+        top:250px;
+    }
+    
+    .glider-next{
+        right:-440px;
+        top:250px;
+    } 
+}
