@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c37e92e1fa3dc3738411.js"
+    "url": "webpack-runtime-beeab38f1a142f8a798e.js"
   },
   {
     "url": "framework-75da9754c2a76bbaf08a.js"
   },
   {
-    "url": "app-020895fbd1ab45bbd945.js"
+    "url": "app-c3a55245533e1421697d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "487aa0f1805332b1279f23646acbed3f"
+    "revision": "7d121b283e0c326c87e404d1e7f2a7e8"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-c25716df4fbb2532700a.js"
@@ -48,11 +48,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "62e0014ca1b7fa4d5493d4866a1f9017"
+    "revision": "c22b27288b6c49f3ed0f13ea785f2fa2"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "139b754e0018bed5cb2c4ac8b8ae9956"
+    "revision": "11cb1e7c14f4a3d4b29e673a204448a0"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -140,12 +140,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/ReactFancyGallery`), ``)
+  pathname = pathname.replace(new RegExp(`^/FancyReactGallery`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/ReactFancyGallery/app-020895fbd1ab45bbd945.js`))) {
+  if (!resources || !(await caches.match(`/FancyReactGallery/app-c3a55245533e1421697d.js`))) {
     return await fetch(event.request)
   }
 
@@ -158,7 +158,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/ReactFancyGallery/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/FancyReactGallery/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
