@@ -56,11 +56,13 @@ I used an intersection observer to detect when the 4th last image entered the vi
 
 ## Results
 
-A Google Lighthouse audit gave a performance score of 92 (up from 76).
+Performance was audited at https://alicecampkin.github.io/FancyReactGallery/ in a Chrome incognito window.
 
-Time to Interactive decreased from 6.3s to 2.8s (56% reduction)
+A Google Lighthouse audit gave a performance score of 94 (up from 76).
 
-Transfer size decreased from 4.4MB to 272kB (94% reduction).
+Time to Interactive decreased from 6.3s to 2.8s (56% improvement)
+
+Transfer size decreased from 4.4MB to 405kB (91% improvement).
 
 
 
